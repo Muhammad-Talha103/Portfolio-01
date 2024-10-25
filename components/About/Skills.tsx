@@ -102,23 +102,25 @@ const SkillsComponent: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentRef = ref.current; // Copy ref.current to a variable
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

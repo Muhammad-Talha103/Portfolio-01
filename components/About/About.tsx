@@ -50,7 +50,7 @@ const About = () => {
           <div className="md:w-1/2 flex flex-col justify-center items-start mb-8 md:mb-0">
             <h2 className="text-lg font-bold uppercase mb-2">Biography</h2>
             <p className="text-base leading-relaxed mb-2">
-              I'm{" "}
+              I&apos;m{" "}
               <span className="font-semibold text-main uppercase">
                 Muhammad Talha
               </span>
