@@ -37,13 +37,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white">
       <div className="h-20 w-full py-6 px-5 mx-auto  flex justify-between items-center border-b-[1px] border-b-main">
-        <Link href='/'>
-        <h1 className="md:text-3xl text-2xl font-bold">
-          Muhammad <span className="text-main">Talha</span>
-        </h1>
+        <Link href="/">
+          <h1 className="md:text-3xl text-2xl font-bold">
+            Muhammad <span className="text-main">Talha</span>
+          </h1>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex gap-4 font-semibold">
             {links.map((link) => (
@@ -69,22 +68,17 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Link href='/contact'>
-        <button className="bg-main px-8 hidden border-[1px] duration-300  hover:bg-white hover:border-[1px] hover:border-main hover:text-black   md:block py-2 rounded-full font-semibold text-white hover:bg-opacity-90 ">
-          Hire Me
-        </button>
+        <Link href="/contact">
+          <button className="bg-main px-8 hidden border-[1px] duration-300  hover:bg-white hover:border-[1px] hover:border-main hover:text-black   md:block py-2 rounded-full font-semibold text-white hover:bg-opacity-90 ">
+            Hire Me
+          </button>
         </Link>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={toggleSidebar}
-        >
+        <button className="md:hidden" onClick={toggleSidebar}>
           <RxHamburgerMenu size={24} className="text-main" />
         </button>
       </div>
 
-      {/* Sidebar Navigation */}
       {isMobile && (
         <div
           className={`fixed inset-0 z-50 transition-opacity duration-300 ${

@@ -1,22 +1,22 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation"; 
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 
 const Footer = () => {
   const [showContent, setShowContent] = useState(false);
-  const pathname = usePathname(); // Get the current pathname
+  const pathname = usePathname(); 
 
   useEffect(() => {
-    setShowContent(false); // Reset visibility when route changes
+    setShowContent(false); 
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 1500); // 2 seconds delay
+    }, 1500); 
 
-    return () => clearTimeout(timer); // Cleanup timer
-  }, [pathname]); // Depend on pathname
+    return () => clearTimeout(timer); 
+  }, [pathname]); 
 
   const currentYear = new Date().getFullYear();
 

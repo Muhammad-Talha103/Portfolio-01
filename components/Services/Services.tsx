@@ -36,7 +36,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white">
       {isVisible && (
         <>
           <header className="bg-main text-white py-16 px-4">
@@ -74,7 +74,7 @@ export default function ServicesPage() {
                 Ready to elevate your web presence?
               </h2>
               <p className="text-xl mb-8 font-semibold">
-                Let's create something amazing together!
+                Let&apos;s create something amazing together!
               </p>
               <Link href="/contact">
                 <motion.button

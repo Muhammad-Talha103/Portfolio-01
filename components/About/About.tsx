@@ -15,7 +15,7 @@ const About = () => {
       setIsVisible(true);
     }, 1500);
 
-    return () => clearTimeout(timer); // Clean up the timer on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   const containerVariants = {
@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div>
       <motion.div
-        className="w-full px-4 md:px-8"
+        className="w-full"
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
         variants={containerVariants}
@@ -101,9 +101,9 @@ const About = () => {
             </div>
           </div>
         </motion.div>
+        <Skills />
+        <Education />
       </motion.div>
-      <Skills />
-      <Education/>
     </div>
   );
 };

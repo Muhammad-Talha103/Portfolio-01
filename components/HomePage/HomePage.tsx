@@ -14,7 +14,7 @@ const HomePage = () => {
       setShowContent(true);
     }, 1500);
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
+    return () => clearTimeout(timer); 
   }, []);
 
   const fadeIn = {

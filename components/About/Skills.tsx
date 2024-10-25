@@ -106,7 +106,7 @@ const SkillsComponent: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing once visible
+          observer.disconnect(); 
         }
       },
       { threshold: 0.1 }

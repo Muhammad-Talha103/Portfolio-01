@@ -1,4 +1,4 @@
-// components/Education.js
+
 import React from 'react';
 
 const Education = () => {

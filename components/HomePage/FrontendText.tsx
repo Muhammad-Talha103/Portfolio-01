@@ -19,10 +19,10 @@ const FrontendText = () => {
           Enhance Your Frontend Development with a Complimentary Consultation!
         </h2>
         <p className="text-sm text-gray-600">
-          Looking to elevate your website's user experience? I offer
+          Looking to elevate your website&apos;s user experience? I offer
           complimentary consultations for frontend development. Together, we can
           explore your project goals, design concepts, and technical
-          requirements. Let's collaborate to create a seamless and engaging
+          requirements. Let&apos;s collaborate to create a seamless and engaging
           interface that captivates your audience.
         </p>
       </div>
