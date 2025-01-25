@@ -1,42 +1,33 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import StairTransition from "@/components/Animation/StairTransition";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"], 
+  variable: "--font-poppins", 
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Muhammad Talha Portfolio",
   description: "Developed By Muhammad Talha",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="z-50 relative">
-       <Header />
-        <StairTransition/>
-        {children}
-        <Footer/>
-       </div>
+      <body className={`${poppins.variable} antialiased`}>
+        <div className="z-50 relative ">
+          <Header />
+          <StairTransition />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

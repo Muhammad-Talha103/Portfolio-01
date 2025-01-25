@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation"; 
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
+import Container from "@/shared/Container";
 
 const Footer = () => {
   const [showContent, setShowContent] = useState(false);
@@ -40,7 +41,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="text-gray-600 body-font relative ">
+    <Container className="text-gray-600 body-font relative ">
       {showContent && (
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col border-t-[1px] border-main">
           <Link href="/">
@@ -67,7 +68,7 @@ const Footer = () => {
           </span>
         </div>
       )}
-    </footer>
+    </Container>
   );
 };
 

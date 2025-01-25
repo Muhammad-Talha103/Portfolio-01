@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-
+import Container from "@/shared/Container";
+import {skills} from './Helpers';
 interface CircularProgressBarProps {
   percentage: number;
   size?: number;
@@ -82,27 +83,14 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
   );
 };
 
-const skills = [
-  { label: "HTML", percentage: 99, color: "text-red-600" },
-  { label: "CSS", percentage: 95, color: "text-blue-500" },
-  { label: "JAVASCRIPT", percentage: 85, color: "text-yellow-400" },
-  { label: "TYPESCRIPT", percentage: 90, color: "text-blue-600" },
-  { label: "NEXT.JS", percentage: 80, color: "text-black" },
-  { label: "REACT", percentage: 65, color: "text-[#61DAFB]" },
-  { label: "TAILWIND CSS", percentage: 87, color: "text-sky-400" },
-  { label: "GIT", percentage: 70, color: "text-orange-700" },
-  { label: "GITHUB", percentage: 80, color: "text-gray-600" },
-  { label: "REDUX", percentage: 72, color: "text-purple-600" },
-  { label: "CMS", percentage: 83, color: "text-blue-600" },
-  { label: "FIREBASE", percentage: 70, color: "text-yellow-500" },
-];
+
 
 const SkillsComponent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const currentRef = ref.current; // Copy ref.current to a variable
+    const currentRef = ref.current;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -128,9 +116,9 @@ const SkillsComponent: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="min-h-[600px] bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 my-12"
+      className="min-h-[600px] w-full bg-gray-100 py-12  my-12"
     >
-      <div className="max-w-7xl mx-auto">
+      <Container >
         <h1 className="text-4xl font-bold text-center mb-12 uppercase">
           Skills
         </h1>
@@ -151,7 +139,7 @@ const SkillsComponent: React.FC = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

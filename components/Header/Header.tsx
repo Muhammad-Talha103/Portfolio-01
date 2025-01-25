@@ -5,6 +5,7 @@ import Link from "next/link";
 import { RxCross1 } from "react-icons/rx";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { usePathname } from "next/navigation";
+import Container from "@/shared/Container";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -35,8 +36,10 @@ export default function Header() {
 
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 bg-white">
-      <div className="h-20 w-full py-6 px-5 mx-auto  flex justify-between items-center border-b-[1px] border-b-main">
+    <div className="z-50 bg-white sticky top-0 ">
+
+    <Container className="">
+      <div className="h-20 w-full py-6 xs:px-5  mx-auto  flex justify-between items-center border-b-[1px] border-b-main">
         <Link href="/">
           <h1 className="md:text-3xl text-2xl font-bold">
             Muhammad <span className="text-main">Talha</span>
@@ -44,7 +47,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex gap-4 font-semibold">
+          <ul className="flex gap-4 font-medium">
             {links.map((link) => (
               <li key={link.name} className="cursor-pointer group">
                 <Link
@@ -69,7 +72,7 @@ export default function Header() {
           </ul>
         </nav>
         <Link href="/contact">
-          <button className="bg-main px-8 hidden border-[1px] duration-300  hover:bg-white hover:border-[1px] hover:border-main hover:text-black   md:block py-2 rounded-full font-semibold text-white hover:bg-opacity-90 ">
+          <button className="bg-main px-8 hidden border-[1px] duration-300  hover:bg-white hover:border-[1px] hover:border-main hover:text-black   md:block py-2 rounded-full font-medium text-white hover:bg-opacity-90 ">
             Hire Me
           </button>
         </Link>
@@ -122,6 +125,7 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </Container>
+    </div>
   );
 }

@@ -1,10 +1,13 @@
 import FrontendImage from "@/images/frontendImage.jpg";
+import Container from "@/shared/Container";
 import Image from "next/image";
 import React from "react";
 
 const FrontendText = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-around px-8 mt-16 py-12 w-full bg-gray-100">
+    <div className="flex flex-col md:flex-row justify-around  mt-16 py-12 w-full bg-gray-100">
+      <Container className="flex flex-col md:flex-row justify-around  w-full">
+
       <div className="w-full md:w-1/2 flex justify-center md:justify-end px-4">
         <Image
           src={FrontendImage}
@@ -26,6 +29,7 @@ const FrontendText = () => {
           interface that captivates your audience.
         </p>
       </div>
+      </Container>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { SiJavascript, SiTypescript, SiNextdotjs, SiRedux, SiSanity } from 'reac
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { BiLogoFirebase } from 'react-icons/bi'
 
+
 export default function RunningSlider() {
   const sliderRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)

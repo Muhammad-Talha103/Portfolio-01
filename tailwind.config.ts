@@ -5,6 +5,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./shared/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -12,12 +13,12 @@ const config: Config = {
         main : '#2dd4bf'
       },
       screens: {
+        xs:'375px',
         md: "850px",
-        maxmd:'960px'
+        maxmd:'960px',
+        xxl:'1440px'
       },
-      backgroundImage: {
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5f 100px)', 
-      },
+      
     },
   },
   plugins: [],

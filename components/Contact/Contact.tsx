@@ -7,6 +7,7 @@ import { FaLocationDot } from "react-icons/fa6"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import Form from './Form'
+import Container from "@/shared/Container"
 
 const Contact = () => {
   const [showContact, setShowContact] = useState(false)
@@ -42,11 +43,13 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full mx-auto relative py-10">
+    <div className="bg-gray-100">
+
+    <Container className=" relative py-10">
       <AnimatePresence>
         {showContact && (
           <motion.div
-            className="flex flex-col md:flex-row gap-8 bg-gray-100 items-center justify-between px-6 md:px-12 py-8 md:py-16 rounded-lg shadow-lg"
+            className="flex flex-col md:flex-row gap-8 bg-gray-100 items-center justify-between xs:px-3 md:px-12 py-8 md:py-16 rounded-lg shadow-lg"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -91,6 +94,7 @@ const Contact = () => {
           </motion.div>
         )}
       </AnimatePresence>
+    </Container>
     </div>
   )
 }
