@@ -62,7 +62,9 @@ export default function ProjectsPage() {
                       {project.title}
                     </h2>
                     <p className="text-gray-600 h-20 flex items-center">
-                      {project.description}
+                    {project.description.length > 50
+        ? project.description.slice(0, 100) + "..."
+        : project.description}
                     </p>
                     <div className="flex justify-between  py-3 mr-3 mt-3">
                       <Link
